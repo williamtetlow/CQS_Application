@@ -8,13 +8,13 @@ using Newtonsoft.Json;
 
 namespace Service.Decorators.QueryHandler
 {
-    public class LoggingQueryHandlerDecorator<TQuery, TResult> : IQueryHandler<TQuery, TResult> where TQuery : IQuery<TResult>
+    public class LogQueryDecorator<TQuery, TResult> : IQueryHandler<TQuery, TResult> where TQuery : IQuery<TResult>
     {
-        private ILogger<LoggingQueryHandlerDecorator<TQuery, TResult>> _logger;
+        private readonly ILogger _logger;
 
         private readonly IQueryHandler<TQuery, TResult> _decorated;
 
-        public LoggingQueryHandlerDecorator(ILogger<LoggingQueryHandlerDecorator<TQuery, TResult>> logger,
+        public LogQueryDecorator(ILogger logger,
             IQueryHandler<TQuery, TResult> decorated)
         {
             _logger = logger;

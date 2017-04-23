@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Service.Decorators.QueryHandler
 {
-    public class ValidateQueryHandlerDecorator<TQuery, TResult> : IQueryHandler<TQuery, TResult> where TQuery : IQuery<TResult>
+    public class ValidateQueryDecorator<TQuery, TResult> : IQueryHandler<TQuery, TResult> where TQuery : IQuery<TResult>
     {
         private readonly IQueryHandler<TQuery, TResult> _decorated;
 
-        public ValidateQueryHandlerDecorator(IQueryHandler<TQuery, TResult> decorated)
+        public ValidateQueryDecorator(IQueryHandler<TQuery, TResult> decorated)
         {
             _decorated = decorated;
         }

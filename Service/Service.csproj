@@ -72,8 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Decorators\QueryHandler\LoggingQueryHandlerDecorator.cs" />
-    <Compile Include="Decorators\QueryHandler\ValidateQueryHandlerDecorator.cs" />
+    <Compile Include="Decorators\CommandHandler\LogCommandCalledDecorator.cs" />
+    <Compile Include="Decorators\CommandHandler\LogCommandExceptionDecorator.cs" />
+    <Compile Include="Decorators\CommandHandler\SaveTransactionDecorator.cs" />
+    <Compile Include="Decorators\QueryHandler\LogQueryDecorator.cs" />
+    <Compile Include="Decorators\QueryHandler\LogQueryExceptionDecorator.cs" />
+    <Compile Include="Decorators\QueryHandler\ValidateQueryDecorator.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="ICommandHandler.cs" />
     <Compile Include="IQuery.cs" />
@@ -81,9 +85,10 @@
     <Compile Include="Orders\FindOrderById\FindOrderByIdQuery.cs" />
     <Compile Include="Orders\FindOrderById\FindOrderByIdQueryHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryProcessor\IQueryProcessor.cs" />
+    <Compile Include="QueryProcessor\QueryProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Decorators\CommandHandler\" />
     <Folder Include="Orders\CompleteOrder\" />
     <Folder Include="Orders\CreateOrder\" />
   </ItemGroup>

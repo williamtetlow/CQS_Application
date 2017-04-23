@@ -7,5 +7,6 @@ namespace Persistence
     {
         DbSet<Order> Orders { get; set; }
         DbSet<OrderLine> OrderLines { get; set; }
+        int SaveChanges();
     }
 }

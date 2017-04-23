@@ -15,6 +15,7 @@ using Persistence;
 using Service;
 using Service.Decorators.QueryHandler;
 using Service.Orders.FindOrderById;
+using Service.QueryProcessor;
 
 namespace CqsApplication
 {
@@ -63,14 +64,26 @@ namespace CqsApplication
             // -- COMPOSITION ROOT (Add IOC Definitions Here)
 
             /*
-             * *** QUERY HANDLERS *** 
-             */
+             * QUERY HANDLERS 
+             * **/
 
             services.AddTransient<IQueryHandler<FindOrderByIdQuery, Order>>(x =>
-                new LoggingQueryHandlerDecorator<FindOrderByIdQuery, Order>(
-                    x.GetService<ILogger<LoggingQueryHandlerDecorator<FindOrderByIdQuery, Order>>>(),
-                    new ValidateQueryHandlerDecorator<FindOrderByIdQuery, Order>(
-                        new FindOrderByIdQueryHandler(x.GetService<ICqsDbContext>()))));
+                new LogQueryDecorator<FindOrderByIdQuery, Order>(
+                    x.GetService<ILogger>(),
+                new LogQueryExceptionDecorator<FindOrderByIdQuery, Order>(
+                    x.GetService<ILogger>(),
+                    new ValidateQueryDecorator<FindOrderByIdQuery, Order>(
+                        new FindOrderByIdQueryHandler(x.GetService<ICqsDbContext>())))));
+
+            /*
+             * COMMAND HANDLERS   
+             * **/
+
+            /*
+             * APPLICATION SERVICES
+             * **/
+
+            services.AddTransient<IQueryProcessor, QueryProcessor>();
 
         }
 
