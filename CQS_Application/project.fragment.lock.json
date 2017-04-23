@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "exports": {
+    "Domain/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5.2",
+      "compile": {
+        "bin/Debug/Domain.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/Domain.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/Domain.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "Persistence/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5.2",
+      "compile": {
+        "bin/Debug/Persistence.dll": {}
+      },
+      "runtime": {
+        "../CQS_Application/packages/EntityFramework.6.1.3/lib/net45/EntityFramework.SqlServer.dll": {},
+        "../CQS_Application/packages/EntityFramework.6.1.3/lib/net45/EntityFramework.dll": {},
+        "bin/Debug/Persistence.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/Persistence.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    }
+  }
+}
