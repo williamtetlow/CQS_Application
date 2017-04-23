@@ -9,5 +9,7 @@ namespace Domain
     public class Order
     {
         public Guid Id { get; set; }
+
+        public virtual ICollection<OrderLine> OrderLine { get; set; }
     }
 }

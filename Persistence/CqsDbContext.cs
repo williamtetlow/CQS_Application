@@ -12,9 +12,15 @@ namespace Persistence
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Order>()
+                .HasMany(order => order.OrderLine)
+                .WithRequired()
+                .HasForeignKey(orderLine => orderLine.OrderId);
         }
 
         // -- DB Tables
         public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderLine> OrderLines { get; set; }
     }
 }
