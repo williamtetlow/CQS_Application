@@ -82,6 +82,10 @@
     <Compile Include="ICommandHandler.cs" />
     <Compile Include="IQuery.cs" />
     <Compile Include="IQueryHandler.cs" />
+    <Compile Include="OrderLines\FindOrderLinesByIds\FindOrderLinesByIdsQuery.cs" />
+    <Compile Include="OrderLines\FindOrderLinesByIds\FindOrderLinesByIdsQueryHandler.cs" />
+    <Compile Include="Orders\CreateOrder\CreateOrderCommand.cs" />
+    <Compile Include="Orders\CreateOrder\CreateOrderCommandHandler.cs" />
     <Compile Include="Orders\FindOrderById\FindOrderByIdQuery.cs" />
     <Compile Include="Orders\FindOrderById\FindOrderByIdQueryHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,12 +94,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Orders\CompleteOrder\" />
-    <Folder Include="Orders\CreateOrder\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{256d02b7-a59a-4f6a-8941-73b7ce5ea0e8}</Project>
       <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Events\Events.csproj">
+      <Project>{c896e8e8-8a4e-470c-9938-04144a20ab00}</Project>
+      <Name>Events</Name>
     </ProjectReference>
     <ProjectReference Include="..\Persistence\Persistence.csproj">
       <Project>{84d97f67-23ee-4b2f-99fd-269e4dbe4e58}</Project>

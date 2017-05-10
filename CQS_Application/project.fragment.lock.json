@@ -18,6 +18,23 @@
         }
       }
     },
+    "Events/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5.2",
+      "compile": {
+        "bin/Debug/Events.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/Events.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/Events.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
     "Persistence/1.0.0": {
       "type": "project",
       "framework": ".NETFramework,Version=v4.5.2",

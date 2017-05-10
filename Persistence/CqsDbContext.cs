@@ -14,7 +14,7 @@ namespace Persistence
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Order>()
-                .HasMany(order => order.OrderLine)
+                .HasMany(order => order.OrderLines)
                 .WithRequired()
                 .HasForeignKey(orderLine => orderLine.OrderId);
         }
