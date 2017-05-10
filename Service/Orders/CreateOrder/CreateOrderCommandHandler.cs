@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Domain;
+using Events.Orders.OrderCreated;
 using Microsoft.Extensions.Logging;
 using Persistence;
 using Service.OrderLines.FindOrderLinesByIds;
@@ -33,6 +34,8 @@ namespace Service.Orders.CreateOrder
             };
 
             _dbContext.Orders.Add(order);
+
+            command.CommandCompletedEvents.Add(new OrderCreatedEvent(order: order));
         }
 
         private ICollection<OrderLine> GetOrderLines(IEnumerable<Guid> ids)
