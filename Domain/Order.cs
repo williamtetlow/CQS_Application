@@ -10,6 +10,8 @@ namespace Domain
     {
         public Guid Id { get; set; }
 
-        public virtual ICollection<OrderLine> OrderLine { get; set; }
+        public string User { get; set; }
+
+        public virtual ICollection<OrderLine> OrderLines { get; set; }
     }
 }

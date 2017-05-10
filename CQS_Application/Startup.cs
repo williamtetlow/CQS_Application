@@ -13,7 +13,10 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Converters;
 using Persistence;
 using Service;
+using Service.Decorators.CommandHandler;
 using Service.Decorators.QueryHandler;
+using Service.OrderLines.FindOrderLinesByIds;
+using Service.Orders.CreateOrder;
 using Service.Orders.FindOrderById;
 using Service.QueryProcessor;
 
@@ -70,14 +73,35 @@ namespace CqsApplication
             services.AddTransient<IQueryHandler<FindOrderByIdQuery, Order>>(x =>
                 new LogQueryDecorator<FindOrderByIdQuery, Order>(
                     x.GetService<ILogger>(),
-                new LogQueryExceptionDecorator<FindOrderByIdQuery, Order>(
+                    new LogQueryExceptionDecorator<FindOrderByIdQuery, Order>(
+                        x.GetService<ILogger>(),
+                        new ValidateQueryDecorator<FindOrderByIdQuery, Order>(
+                            new FindOrderByIdQueryHandler(x.GetService<ICqsDbContext>())))));
+
+            services.AddTransient<IQueryHandler<FindOrderLinesByIdsQuery, IEnumerable<OrderLine>>>(x =>
+                new LogQueryDecorator<FindOrderLinesByIdsQuery, IEnumerable<OrderLine>>(
                     x.GetService<ILogger>(),
-                    new ValidateQueryDecorator<FindOrderByIdQuery, Order>(
-                        new FindOrderByIdQueryHandler(x.GetService<ICqsDbContext>())))));
+                    new LogQueryExceptionDecorator<FindOrderLinesByIdsQuery, IEnumerable<OrderLine>>(
+                        x.GetService<ILogger>(),
+                        new ValidateQueryDecorator<FindOrderLinesByIdsQuery, IEnumerable<OrderLine>>(
+                            new FindOrderLinesByIdsQueryHandler(x.GetService<ICqsDbContext>())))));
 
             /*
              * COMMAND HANDLERS   
              * **/
+
+            services.AddTransient<ICommandHandler<CreateOrderCommand>>(x =>
+                new LogCommandCalledDecorator<CreateOrderCommand>(
+                    x.GetService<ILogger>(),
+                    new LogCommandExceptionDecorator<CreateOrderCommand>(
+                        x.GetService<ILogger>(),
+                        new SaveTransactionDecorator<CreateOrderCommand>(
+                            x.GetService<ICqsDbContext>(),
+                            x.GetService<ILogger>(),
+                            new CreateOrderCommandHandler(
+                                x.GetService<ICqsDbContext>(),
+                                x.GetService<IQueryProcessor>(),
+                                x.GetService<ILogger>())))));
 
             /*
              * APPLICATION SERVICES
