@@ -1,10 +1,10 @@
-C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Service.dll.config
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Service.dll
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Service.pdb
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Domain.dll
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\EntityFramework.dll
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Events.dll
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Microsoft.Extensions.Logging.dll
@@ -12,6 +12,7 @@ C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Persistence.dll
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Domain.pdb
+C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Events.pdb
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Persistence.pdb
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\EntityFramework.xml
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\EntityFramework.SqlServer.xml
@@ -19,7 +20,8 @@ C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Microsoft.Extensions.Logging.xml
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Newtonsoft.Json.xml
+C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\obj\Debug\Service.dll
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\obj\Debug\Service.pdb
-C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Events.dll
-C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Events.pdb
+C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Service\bin\Debug\Microsoft.Extensions.DependencyInjection.xml

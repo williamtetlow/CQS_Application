@@ -60,6 +60,7 @@
     <Compile Include="IEventDispatcher.cs" />
     <Compile Include="IEventHandler.cs" />
     <Compile Include="Orders\OrderCreated\OrderCreatedEvent.cs" />
+    <Compile Include="Orders\OrderCreated\OrderCreatedEventHandlerSignlaRDispatchercs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

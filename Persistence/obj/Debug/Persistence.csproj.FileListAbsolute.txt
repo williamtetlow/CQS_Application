@@ -1,4 +1,3 @@
-C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Persistence\bin\Debug\Persistence.dll.config
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Persistence\bin\Debug\Persistence.dll
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Persistence\bin\Debug\Persistence.pdb
@@ -8,5 +7,6 @@ C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Persistence\bin\D
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Persistence\bin\Debug\Domain.pdb
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Persistence\bin\Debug\EntityFramework.xml
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Persistence\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Persistence\obj\Debug\Persistence.dll
 C:\Users\William Tetlow\Documents\HomeProjects\CQS_Application\Persistence\obj\Debug\Persistence.pdb

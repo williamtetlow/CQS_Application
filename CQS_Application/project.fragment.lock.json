@@ -25,6 +25,9 @@
         "bin/Debug/Events.dll": {}
       },
       "runtime": {
+        "../CQS_Application/packages/Microsoft.Extensions.DependencyInjection.1.1.1/lib/netstandard1.1/Microsoft.Extensions.DependencyInjection.dll": {},
+        "../CQS_Application/packages/Microsoft.Extensions.DependencyInjection.Abstractions.1.1.1/lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {},
+        "../CQS_Application/packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll": {},
         "bin/Debug/Events.dll": {}
       },
       "contentFiles": {
@@ -63,7 +66,8 @@
       "runtime": {
         "../CQS_Application/packages/EntityFramework.6.1.3/lib/net45/EntityFramework.SqlServer.dll": {},
         "../CQS_Application/packages/EntityFramework.6.1.3/lib/net45/EntityFramework.dll": {},
-        "../CQS_Application/packages/Microsoft.Extensions.DependencyInjection.Abstractions.1.1.0/lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {},
+        "../CQS_Application/packages/Microsoft.Extensions.DependencyInjection.1.1.1/lib/netstandard1.1/Microsoft.Extensions.DependencyInjection.dll": {},
+        "../CQS_Application/packages/Microsoft.Extensions.DependencyInjection.Abstractions.1.1.1/lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {},
         "../CQS_Application/packages/Microsoft.Extensions.Logging.1.1.1/lib/netstandard1.1/Microsoft.Extensions.Logging.dll": {},
         "../CQS_Application/packages/Microsoft.Extensions.Logging.Abstractions.1.1.1/lib/netstandard1.1/Microsoft.Extensions.Logging.Abstractions.dll": {},
         "../CQS_Application/packages/Newtonsoft.Json.10.0.2/lib/net45/Newtonsoft.Json.dll": {},

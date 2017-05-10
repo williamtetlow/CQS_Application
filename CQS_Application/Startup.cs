@@ -4,6 +4,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using Domain;
+using Events;
+using Events.Orders.OrderCreated;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
@@ -95,20 +97,31 @@ namespace CqsApplication
                     x.GetService<ILogger>(),
                     new LogCommandExceptionDecorator<CreateOrderCommand>(
                         x.GetService<ILogger>(),
-                        new SaveTransactionDecorator<CreateOrderCommand>(
-                            x.GetService<ICqsDbContext>(),
+                        new CommandEventsDispatcherDecorator<CreateOrderCommand>(
+                            x.GetService<IEventDispatcher>(),
                             x.GetService<ILogger>(),
-                            new CreateOrderCommandHandler(
+                            new SaveTransactionDecorator<CreateOrderCommand>(
                                 x.GetService<ICqsDbContext>(),
-                                x.GetService<IQueryProcessor>(),
-                                x.GetService<ILogger>())))));
+                                x.GetService<ILogger>(),
+                                new CreateOrderCommandHandler(
+                                    x.GetService<ICqsDbContext>(),
+                                    x.GetService<IQueryProcessor>(),
+                                    x.GetService<ILogger>()))))));
 
             /*
              * APPLICATION SERVICES
              * **/
 
             services.AddTransient<IQueryProcessor, QueryProcessor>();
+            
 
+            /*
+             * EVENTS
+             * **/
+
+            services.AddTransient<IEventDispatcher, EventDispatcher>();
+
+            services.AddTransient<IEventHandler<OrderCreatedEvent>, OrderCreatedEventHandlerSignalRDispatcher>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Events;
 
 namespace Service.Orders.CreateOrder
 {
@@ -13,6 +14,7 @@ namespace Service.Orders.CreateOrder
         {
             User = user;
             OrderLineIds = orderLineIds;
+            CommandCompletedEvents = new List<IEvent>();
         }
 
         [Required(AllowEmptyStrings = false)]
@@ -20,5 +22,7 @@ namespace Service.Orders.CreateOrder
 
         [Required]
         public IEnumerable<Guid> OrderLineIds { get; }
+
+        public IList<IEvent> CommandCompletedEvents { get; }
     }
 }
