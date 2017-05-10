@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Events
 {
-    public class Event
+    public interface IEvent
     {
-        
+        DateTime Timestamp { get; }
     }
 }
